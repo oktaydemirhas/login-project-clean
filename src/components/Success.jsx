@@ -6,7 +6,7 @@ const Success = () => {
     <div className="success-container">
       <div className="success-box">
         <h1>Giriş Başarılı!</h1>
-        <p>Hoş geldin 👋</p>
+        <p>Hoş geldin</p>
       </div>
     </div>
   );
