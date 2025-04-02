@@ -70,7 +70,11 @@ const Login = () => {
         </div>
         {errors.terms && <p className="error">{errors.terms}</p>}
 
-        <button type="submit" disabled={!isFormValid}>
+        <button
+          type="submit"
+          disabled={!isFormValid}
+          data-testid="submit-button"
+        >
           Giriş Yap
         </button>
       </form>
