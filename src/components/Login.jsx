@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import "./Login.css"; // stilleri buradan alacak
 
 const Login = () => {
   const history = useHistory();
@@ -37,40 +38,37 @@ const Login = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "2rem auto" }}>
-      <h2>Giriş Yap</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            placeholder="ornek@mail.com"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
-        </div>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2>Giriş Yap</h2>
 
-        <div>
-          <label>Şifre:</label>
-          <input
-            type="password"
-            value={password}
-            placeholder="Şifreniz"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
-        </div>
+        <label>Email:</label>
+        <input
+          type="email"
+          value={email}
+          placeholder="ornek@mail.com"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        {errors.email && <p className="error">{errors.email}</p>}
 
-        <div>
+        <label>Şifre:</label>
+        <input
+          type="password"
+          value={password}
+          placeholder="Şifreniz"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        {errors.password && <p className="error">{errors.password}</p>}
+
+        <div className="checkbox-wrapper">
           <input
             type="checkbox"
             checked={acceptedTerms}
             onChange={(e) => setAcceptedTerms(e.target.checked)}
           />
-          <label> Şartları kabul ediyorum</label>
-          {errors.terms && <p style={{ color: "red" }}>{errors.terms}</p>}
+          <label>Şartları kabul ediyorum</label>
         </div>
+        {errors.terms && <p className="error">{errors.terms}</p>}
 
         <button type="submit" disabled={!isFormValid}>
           Giriş Yap

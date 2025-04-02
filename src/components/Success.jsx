@@ -1,10 +1,13 @@
 import React from "react";
+import "./Success.css";
 
 const Success = () => {
   return (
-    <div style={{ textAlign: "center", marginTop: "3rem" }}>
-      <h1>Giriş Başarılı!</h1>
-      <p>Hoş geldin 👋</p>
+    <div className="success-container">
+      <div className="success-box">
+        <h1>Giriş Başarılı!</h1>
+        <p>Hoş geldin 👋</p>
+      </div>
     </div>
   );
 };

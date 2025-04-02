@@ -1,0 +1,27 @@
+.success-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .success-box {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    color: #000;
+  }
+  
